@@ -1,0 +1,18 @@
+// for hamburger lines
+@mixin ham-lines{
+    width: 40px;
+    height: 4px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+
+
+// breakpoints
+$min-mobile: 350px;
+$max-mobile: 600px;
+
+$min-tab: 600px;
+$max-tab: 900px;
+
+$min-desktop: 900px;
