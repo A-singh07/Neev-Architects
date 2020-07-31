@@ -7,12 +7,17 @@
 body{
     margin: 0;
     padding: 0;
+    font-family: $font-comforta;
+    line-height: 1.3em;
+    background-color: $sec-color;
 }
 
 a{
     text-decoration: none;
     color: black;
 }
+
+.show{display: block;}
 
 .mother-container{
     transition: margin-top 0.5s;
@@ -22,7 +27,7 @@ a{
         height: 60px;
         position: fixed;
         top: 0;
-        box-shadow: 0px 0px 5px black;
+        // box-shadow: 0px 0px 5px black;
         z-index: 5;
 
         .site-name{
@@ -33,20 +38,41 @@ a{
             height: 100%;
             padding-left: 20px;
             font-size: 1.2em;
-            background-color: chartreuse;
+            // background-color: chartreuse;
 
             a{
                 display: block;
             }
         }
 
+        .menu-desktop{
+            display: none;
+
+            @media screen  and (min-width:$min-desktop){
+                display: block;
+            }
+
+            div{
+                // background-color: brown;
+                display: flex;
+                justify-content:space-around;
+                float: right;
+                width: 60%;
+                padding: 20px 0px;
+            }
+        }
         .ham-menu-wrap{
+            display: block;
             background-color: burlywood;
             position: absolute;
             top: 0;
             right: 0;
             width: 70px;
             height: 100%;
+
+            @media screen and (min-width:$min-desktop){
+                display:none;
+            }
 
             .menu-open{
                 width: 100%;
@@ -131,7 +157,7 @@ a{
                     padding: 20px;
                     margin-top: 20px;
                     text-align: center;
-                    font-size: 1.6em;
+                    font-size: 1.8em;
 
                     @media only screen and (min-width:$min-tab) and (max-width: $max-tab){
                         font-size: 1.7em;
@@ -151,6 +177,52 @@ a{
         header{
             padding: 10px;
 
+        }
+
+        section{
+            width: 100vw;
+
+            .service-details{
+                width: 100%;
+
+                .detail{
+                    display: none;
+                }
+            }
+
+            .services-name{
+                width: 100%;
+                margin-top: 20px;
+                position: absolute;
+
+                h5{
+                    @include section-heading;
+                }
+
+                .serv{
+                    width: 100%;
+                    text-align: center;
+
+                    h4{
+                        font-size: 1.2em;
+                    }
+                    p{
+                        font-size: 0.9em;
+                        text-align: center;
+                        padding: 0px 30px;
+                        
+                        @media screen and (min-width:$min-tab) and (max-width:$max-tab){
+                            padding: 0px 80px;
+                        }
+                    }
+                    .serv-mob{
+                        @media screen and (min-width:$max-tab) {
+                            display: none;
+                        }
+                    }
+                }
+
+            }
         }
     }
 }

@@ -6,13 +6,47 @@
     border-radius: 10px;
 }
 
+// for Section headings
+@mixin section-heading {
+    width: 80px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+
+    &::before{
+        content: '';
+        background-color: $ter-color;
+        position: absolute;
+        top: -10px;
+        width: 30px;
+        height: 2px;
+        left: 20px;
+    }
+}
+
+// Fonts:-
+
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;600;700&family=Monda:wght@400;700&family=Open+Sans:wght@400;600;700;800&family=Questrial&family=Roboto:wght@400;500;700;900&display=swap');
+
+$font-openSans:'Open Sans', sans-serif;
+$font-comforta: 'Comfortaa', cursive;
+$font-monda: 'Monda', sans-serif;
+$font-questrial: 'Questrial', sans-serif;
+$font-roboto: 'Roboto', sans-serif;
+
+// Colors
+
+$pri-color: #1A579E;
+$sec-color: rgb(255, 240, 226);
+$ter-color: #826251;
+
 
 
 // breakpoints
 $min-mobile: 350px;
 $max-mobile: 600px;
 
-$min-tab: 600px;
+$min-tab: 600px; // portrait tablet
 $max-tab: 900px;
 
 $min-desktop: 900px;
