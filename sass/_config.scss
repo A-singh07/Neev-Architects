@@ -1,28 +1,4 @@
-// for hamburger lines
-@mixin ham-lines{
-    width: 40px;
-    height: 4px;
-    background-color: white;
-    border-radius: 10px;
-}
 
-// for Section headings
-@mixin section-heading {
-    width: 80px;
-    margin-left: auto;
-    margin-right: auto;
-    position: relative;
-
-    &::before{
-        content: '';
-        background-color: $ter-color;
-        position: absolute;
-        top: -10px;
-        width: 30px;
-        height: 2px;
-        left: 20px;
-    }
-}
 
 // Fonts:-
 
@@ -37,7 +13,7 @@ $font-roboto: 'Roboto', sans-serif;
 // Colors
 
 $pri-color: #1A579E;
-$sec-color: rgb(255, 240, 226);
+$sec-color: rgb(253, 240, 228);
 $ter-color: #826251;
 
 

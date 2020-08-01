@@ -1,7 +1,8 @@
 @import 'config';
+@import 'some';
 
 *{
-    box-sizing: border-box;
+   box-sizing: border-box;
 }
 
 body{
@@ -10,6 +11,7 @@ body{
     font-family: $font-comforta;
     line-height: 1.3em;
     background-color: $sec-color;
+    overflow-x: hidden;
 }
 
 a{
@@ -17,59 +19,95 @@ a{
     color: black;
 }
 
-.show{display: block;}
-
 .mother-container{
     transition: margin-top 0.5s;
 
     nav{
-        width: 100%;
-        height: 60px;
-        position: fixed;
-        top: 0;
-        // box-shadow: 0px 0px 5px black;
+        // background-color: cyan;
         z-index: 5;
+        padding-top: 10px;
+        width: 100vw;
+        height: 80vw;
+        background: url(../Assets/Images/ImgTag_Architecture.jpg) no-repeat;
+        background-size: 100% 100%;
 
+        @media screen and (min-width:$min-desktop){
+            background: none;
+        }
+        @media screen and (min-width:$min-tab) and (max-width:$max-tab){
+            height: 100vh;
+        }
         .site-name{
             position: absolute;
             top: 0;
             left: 0;
             width: 100px;
-            height: 100%;
-            padding-left: 20px;
-            font-size: 1.2em;
+            font-size: 1.7em;
             // background-color: chartreuse;
 
-            a{
-                display: block;
+            @media screen and (min-width:$min-desktop){
+                font-size: 2em;
+                top: 10px;
             }
+
+            a{
+                // background-color: chocolate;
+                display: block;
+                padding: 20px;
+                transition: all 0.3s;
+
+                &:hover{
+                    color: white;
+                }
+
+                @media screen and (min-width:$min-desktop){
+                    
+                }
+            }
+            
+            
         }
 
         .menu-desktop{
             display: none;
 
-            @media screen  and (min-width:$min-desktop){
-                display: block;
-            }
-
             div{
-                // background-color: brown;
+                // background-color: burlywood;
                 display: flex;
                 justify-content:space-around;
                 float: right;
-                width: 60%;
-                padding: 20px 0px;
+                width: 40%;
+                height: 100%;
+                font-size: 1.3em;
+                font-weight: bold;
             }
+
+            @media screen  and (min-width:$min-desktop){
+                display: block;
+                a{
+                    // background-color: chartreuse;
+                    display: block;
+                    padding: 25px 40px;
+                }
+                a:hover, a:focus{
+                    border-bottom: 2px solid brown;
+                }
+            }
+
         }
         .ham-menu-wrap{
             display: block;
-            background-color: burlywood;
+            // background-color: burlywood;
             position: absolute;
             top: 0;
             right: 0;
-            width: 70px;
-            height: 100%;
+            width: 60px;
+            height: 60px;
 
+            @media screen and (min-width:$min-tab) and (max-width:$max-tab){
+                width: 80px;
+                height: 80px;
+            }
             @media screen and (min-width:$min-desktop){
                 display:none;
             }
@@ -113,7 +151,6 @@ a{
                     overflow-y: scroll;
                 }
                 
-                
                 // for every a tag inside it, even in the subtags.
                 a{
                     display: block;
@@ -123,11 +160,12 @@ a{
 
                     @media only screen and (min-width:$min-tab) and (max-width: $max-tab){
                         border-bottom: 1px solid white;
+                        font-size: 0.9em;
                     }
 
                     p{
                         display: none;
-                        font-size: 0.6em;
+                        font-size: 0.5em;
 
                         @media only screen and (min-width:$min-tab) and (max-width: $max-tab){
                             display: block;
@@ -155,13 +193,13 @@ a{
                     width: 100%;
                     height: 100%;
                     padding: 20px;
-                    margin-top: 20px;
+                    margin-top: 60px;
                     text-align: center;
-                    font-size: 1.8em;
+                    font-size: 1.2em;
 
                     @media only screen and (min-width:$min-tab) and (max-width: $max-tab){
                         font-size: 1.7em;
-                        margin-top: 50px;
+                        margin-top: 70px;
                     }
 
                 }
@@ -174,55 +212,130 @@ a{
         padding-top: 60px;
         transition: margin-top 0.5s;
 
-        header{
-            padding: 10px;
-
-        }
-
         section{
             width: 100vw;
 
-            .service-details{
+            .services{
                 width: 100%;
 
-                .detail{
-                    display: none;
+                .service-details{
+                    width: 100%;
+    
+                    .detail{
+                        display: none;
+                    }
+                }
+    
+                .services-name{
+                    width: 100%;
+                    margin-top: 20px;
+    
+                    h5{
+                        @include section-heading;
+                    }
+    
+                    #ser-container-desk{
+    
+                        .serv{
+                            width: 100%;
+                            text-align: center;
+                            overflow: hidden;
+                            @media screen and (min-width:$min-desktop){
+                                width: 30%;
+                                height: 40%;
+                            }
+    
+                            h4{
+                                font-size: 1em;
+                                @media screen and (min-width:$min-desktop){
+                                    font-size: 1.4em;
+                                }
+                            }
+                            p{
+                                font-size: 0.8em;
+                                text-align: center;
+                                padding: 0px 30px;
+                                
+                                @media screen and (min-width:$min-tab) and (max-width:$max-tab){
+                                    padding: 0px 80px;
+                                }
+                            }
+                            .serv-mob{
+                                @media screen and (min-width:$max-tab) {
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
                 }
             }
+            /* ------ End of Services -----*/
 
-            .services-name{
-                width: 100%;
-                margin-top: 20px;
-                position: absolute;
+            /* -------- Projects ---------- */
+
+            
+            /* ------End of Projects ------- */
+
+            /* ---------- About --------- */
+            .about{
+                // background-color: yellow;
+                margin: 50px 20px;
 
                 h5{
                     @include section-heading;
                 }
+                .abt-detail-container{
+                    background-color: pink;
+                    display: none;
+                    width: 90vw;
+                    height: 20vw;
+                    padding: 0px 30px;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+                .abt-detail{
+                    display: none;
+                }
+                .abt-heads{
+                    background-color: yellow;
+                    display: none;  // make it flex
+                    width: 50%;
+                    margin-left: auto;
+                    margin-right: auto;
 
-                .serv{
-                    width: 100%;
-                    text-align: center;
-
-                    h4{
-                        font-size: 1.2em;
-                    }
-                    p{
-                        font-size: 0.9em;
+                    h3{
+                        background-color: powderblue;
+                        width: 50%;
+                        padding: 15px;
+                        margin: 10px;
                         text-align: center;
-                        padding: 0px 30px;
-                        
-                        @media screen and (min-width:$min-tab) and (max-width:$max-tab){
-                            padding: 0px 80px;
-                        }
                     }
-                    .serv-mob{
-                        @media screen and (min-width:$max-tab) {
-                            display: none;
-                        }
+                }
+                #mob-para{
+                    // background-color: lightblue;
+                    margin: 5px 20px;
+                    padding: 10px 30px;
+                    text-align: center;
+                    font-size: 0.8em;
+
+                    @media screen and (min-width:$min-tab) and (max-width:$max-tab){
+                        padding: 0px 80px;
                     }
                 }
 
+                @media screen and (min-width:$min-desktop) {
+                    .abt-heads{
+                        display: flex;
+                        justify-content: space-around;
+                        align-items: center;
+                    }
+                    #mob-para{
+                        display: none;
+                    }
+                }
             }
+
+            /* ----- End of About -------- */
         }
     }
 }

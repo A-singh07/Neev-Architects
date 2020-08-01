@@ -12,16 +12,14 @@
     <div class="mother-container" id="mother-container">
         <nav>
             <div class="site-name">
-                <a href="#home">
-                    <h1>NA.</h1>
-                </a>
+                <a href="#home">NA.</a>
             </div>
 
             <div class="menu-desktop" id="menu-desktop">
                 <div>
-                    <a href="#">About</a>
-                    <a href="#">Services</a>
-                    <a href="#">Projects</a>
+                    <a href="#services">Services</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#about">About</a>
                 </div>
             </div>
 
@@ -30,16 +28,16 @@
                     <div></div>
                 </div>
                 <div class="top-nav" id="top-nav">
-                    <a href="#" onclick="closeNav()" id="close-btn" class="close-btn">&times;</a>
+                    <a href="javascript:void(0)" onclick="closeNav()" id="close-btn" class="close-btn">&times;</a>
                     <div class="menu-content" id="menu-content">
-                        <a href="#">About <br>
-                            <p>who we are?</p>
-                        </a>
-                        <a href="#">Services <br>
+                        <a href="#services">Services <br>
                             <p>What do we do?</p>
                         </a>
-                        <a href="#">Projects <br>
+                        <a href="#projects">Projects <br>
                             <p>What we've done?</p>
+                        </a>
+                        <a href="#about">About <br>
+                            <p>who we are?</p>
                         </a>
                     </div>
                 </div>
@@ -49,21 +47,12 @@
 
         <!-- -------------- Main Content ------------- -->
         <main id="main">
-            <header>
-                <h1>hahahha</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam ad non dignissimos eveniet! Nemo culpa
-                    consequatur consequuntur neque officiis est aliquid illum adipisci fuga excepturi soluta cupiditate
-                    fugit quibusdam voluptates veniam, maiores earum ipsum a dicta mollitia omnis possimus similique
-                    aspernatur. Suscipit, voluptas. Ut illo corporis quis dicta asperiores natus repellendus enim?
-                    Tempora ducimus ad, dolorum eos expedita minima tempore quia voluptate sunt culpa nostrum odit sit
-                    amet dolore soluta nam eveniet omnis! Quidem hic obcaecati non, tempora tenetur asperiores, dicta at
-                    illum cum eius corrupti eaque minus quae exercitationem, officia aspernatur a delectus ducimus
-                    impedit. Rem velit est quo!</p>
-            </header>
 
             <section>
-                <div class="services">
-                    <div class="service-details">
+                <div class="services" id="services">
+
+                    <!-- For the details in desktop view -->
+                    <!-- <div class="service-details">
                         <div class="detail s1-detail" id="s1-detail">
                             <p>We go beyond standard investigative methods and procedures with state of the art
                                 technologies
@@ -85,38 +74,51 @@
                                 addresses conflicting elements of aesthetics, cost, durability and environmental
                                 responsibility.</p>
                         </div>
-                    </div>
+                    </div> -->
 
                     <div class="services-name">
                         <h5>SERVICES</h5>
-                        <div class="serv s1" onclick="s1Detail()">
-                            <h4>Forensic Architecture</h4>
-                            <p class="serv-mob">We go beyond standard investigative methods and procedures with state of
-                                the art
-                                technologies to ensure accurate reporting, lower costs, and side-step unnecessary
-                                intrusive testing
-                                methods.</p>
-                        </div>
-                        <div class="serv s2">
-                            <h4>Quality Assurance</h4>
-                            <p class="serv-mob">Lending our design and forensic expertise to our waterproofing and
-                                quality assurance
-                                consulting services makes us a valuable third party during the construction process.</p>
-                        </div>
-                        <div class="serv s3">
-                            <h4>Reconstruction services</h4>
-                            <p class="serv-mob">By evaluating a range of building methods and materials through our
-                                forensic engagements,
-                                our
-                                team possesses a unique advantage over traditional architecture firms when it comes to
-                                design reconstruction.</p>
-                        </div>
-                        <div class="serv s4">
-                            <h4>Architecture Design</h4>
-                            <p class="serv-mob">We believe successful design solutions are the result of a comprehensive
-                                program that
-                                addresses conflicting elements of aesthetics, cost, durability and environmental
-                                responsibility.</p>
+                        <div id="ser-container-desk">
+                            <div class="serv s1 services-desktop">
+                                <img src="./Assets/Images/forensic.jpg" class="serv-img">
+                                <h4>Forensic Architecture</h4>
+                                <p class="serv-mob">We go beyond standard investigative methods and procedures with
+                                    state of
+                                    the art
+                                    technologies to ensure accurate reporting, lower costs, and side-step unnecessary
+                                    intrusive testing
+                                    methods.
+                                </p>
+                            </div>
+                            <div class="serv s2 services-desktop">
+                                <img src="./Assets/Images/Quality.jpg" class="serv-img">
+                                <h4>Quality Assurance</h4>
+                                <p class="serv-mob">Lending our design and forensic expertise to our waterproofing and
+                                    quality assurance
+                                    consulting services makes us a valuable third party during the construction process.
+                                </p>
+                            </div>
+                            <div class="serv s3 services-desktop">
+                                <img src="./Assets/Images/Reconstruction.jpg" class="serv-img">
+                                <h4>Reconstruction services</h4>
+                                <p class="serv-mob">By evaluating a range of building methods and materials through our
+                                    forensic engagements,
+                                    our
+                                    team possesses a unique advantage over traditional architecture firms when it comes
+                                    to
+                                    design reconstruction.
+                                </p>
+                            </div>
+                            <div class="serv s4 services-desktop">
+                                <img src="./Assets/Images/Design.jpg" class="serv-img">
+                                <h4>Architecture Design</h4>
+                                <p class="serv-mob">We believe successful design solutions are the result of a
+                                    comprehensive
+                                    program that
+                                    addresses conflicting elements of aesthetics, cost, durability and environmental
+                                    responsibility.
+                                </p>
+                            </div>
                         </div>
                     </div>
 
@@ -129,9 +131,36 @@
                 <!-- End of Projects -->
 
                 <div class="about">
+                    <h5>ABOUT</h5>
+                    <div class="abt-detail-container" id="abt-detail-container">
+                        <div class="abt-detail abt-1" id="what">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime doloremque inventore,
+                                omnis at ipsa totam minima odio recusandae corrupti amet delectus explicabo ratione!
+                                Dolorem, quidem. Excepturi aperiam alias earum veniam.
+                            </p>
+                        </div>
+                        <div class="abt-detail abt-2" id="Who">
+                            <p>With over 30 years experience, our staff offers a unique blend of expertise as
+                                designers and consultants. We’ve been told this combination of talents uniquely supports
+                                our
+                                clients’ needs, but we believe our hands on experience and knowledge of building systems
+                                are the
+                                foundation for the specialized services we offer.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="abt-heads" id="abt-heads">
+                        <h3 class="wh">what do we do?</h3>
+                        <h3 class="wh">who we are?</h3>
+                    </div>
 
+                    <p id="mob-para">With over 30 years experience, our staff offers a unique blend of expertise as
+                        designers and consultants. We’ve been told this combination of talents uniquely supports our
+                        clients’ needs, but we believe our hands on experience and knowledge of building systems are the
+                        foundation for the specialized services we offer.
+                    </p>
                 </div>
-                <!-- End of About -->
+                <!-- End of About Section-->
             </section>
         </main>
         <!-- ------X----- Main Content ------X------- -->
