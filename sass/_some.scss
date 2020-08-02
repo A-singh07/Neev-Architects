@@ -37,7 +37,8 @@
 
 .show{display: block;}
 
-.ser-container-desk{
+
+.ser-container-desk{ 
     // background-color: darkgoldenrod;
     display: flex;
     flex-wrap: wrap;
@@ -47,39 +48,48 @@
     margin-left: auto;
     margin-right: auto;
 
-        .serv{
-            // background-color: cadetblue;
-            margin: 10px;
-            position: relative;
-            cursor: pointer;
+    .serv{
+        // background-color: cadetblue;
+        margin: 10px;
+        position: relative;
+        cursor: pointer;
 
-            img{
-                width: 100%;
-                height: 100%;
-                transition: all 0.3s ease;
-            }
+        img{
+            width: 100%;
+            height: 100%;
+            transition: all 0.3s ease;
+        }
     
-            h4{
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 80%;
-                padding: 20px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                color: white;
-                background-color: rgba(0, 0, 0, 0.39);
-            }
+        h4{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 80%;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.39);
+        }
             
-        }
-        .serv:hover{
+    }
+    .serv:hover{
 
-            img{
-                transform: scale(1.1);
-            }
+        img{
+            transform: scale(1.1);
         }
-        
+    }
+}
+
+.abt-detail-container{
+    background-color: pink;
+    width: 70vw;
+    height: 15vw;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    text-align: center;
     
 }

@@ -284,18 +284,7 @@ a{
                 h5{
                     @include section-heading;
                 }
-                .abt-detail-container{
-                    background-color: pink;
-                    display: none;
-                    width: 90vw;
-                    height: 20vw;
-                    padding: 0px 30px;
-                    margin-left: auto;
-                    margin-right: auto;
-                }
-                .abt-detail{
-                    display: none;
-                }
+                
                 .abt-heads{
                     background-color: yellow;
                     display: none;  // make it flex
@@ -309,6 +298,10 @@ a{
                         padding: 15px;
                         margin: 10px;
                         text-align: center;
+                        cursor: pointer;
+
+                        #whatID{display: none;}
+                        #whoID{display: none;}
                     }
                 }
                 #mob-para{
@@ -321,6 +314,9 @@ a{
                     @media screen and (min-width:$min-tab) and (max-width:$max-tab){
                         padding: 0px 80px;
                     }
+                }
+                #abt-detail-container{
+                    display: none;
                 }
 
                 @media screen and (min-width:$min-desktop) {

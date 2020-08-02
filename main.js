@@ -40,12 +40,3 @@ x.addListener(services_media)
 
 
 // About for Desktop
-
-for (let i = 0; i < wh.length; i++) {
-    document.getElementsByClassName('wh')[i].addEventListener("click", abtDetail);
-}
-
-function abtDetail() {
-    document.getElementById('abt-detail-container').style.display = "block";
-
-}
