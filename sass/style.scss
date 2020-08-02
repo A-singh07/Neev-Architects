@@ -57,7 +57,7 @@ a{
                 transition: all 0.3s;
 
                 &:hover{
-                    color: white;
+                    color: rgba(80, 80, 80, 0.534);
                 }
 
                 @media screen and (min-width:$min-desktop){
@@ -299,9 +299,6 @@ a{
                         margin: 10px;
                         text-align: center;
                         cursor: pointer;
-
-                        #whatID{display: none;}
-                        #whoID{display: none;}
                     }
                 }
                 #mob-para{
@@ -316,17 +313,29 @@ a{
                     }
                 }
                 #abt-detail-container{
+                    background-color: pink;
                     display: none;
+                    width: 70vw;
+                    height: 15vw;
+                    margin-left: auto;
+                    margin-right: auto;
+                    padding: 20px;
+                    text-align: center;
+
                 }
 
                 @media screen and (min-width:$min-desktop) {
-                    .abt-heads{
-                        display: flex;
-                        justify-content: space-around;
-                        align-items: center;
-                    }
+                    // .abt-heads{
+                    //     display: flex;
+                    //     justify-content: space-around;
+                    //     align-items: center;
+                    // }
                     #mob-para{
-                        display: none;
+                        // display: none;
+                        font-size: 1.1em;
+                    }
+                    #abt-detail-container{
+                        display: block;
                     }
                 }
             }

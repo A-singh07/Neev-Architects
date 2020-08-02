@@ -40,3 +40,12 @@ x.addListener(services_media)
 
 
 // About for Desktop
+
+function whtFunc() {
+    document.getElementById('what').classList.toggle("show");
+}
+
+// function whoFunc() {
+//     document.getElementById('who').style.display = "block";
+//     document.getElementById('what').style.display = "none";
+// }
