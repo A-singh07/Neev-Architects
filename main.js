@@ -39,6 +39,17 @@ services_media()
 x.addListener(services_media)
 
 
+
+// Projects for desktop
+function residency() {
+    document.getElementById("resd-1").style.display = "none";
+}
+
+
+
+
+
+
 // About for Desktop
 
 function whtFunc() {
