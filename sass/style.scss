@@ -34,6 +34,10 @@ a{
 
 .mother-container{
     transition: margin-top 0.5s;
+    
+    @media screen and (min-width:$min-desktop){
+        scroll-behavior: smooth;
+    }
 
     nav{
         // background-color: cyan;
@@ -230,14 +234,7 @@ a{
 
             .services{
                 width: 100%;
-
-                .service-details{
-                    width: 100%;
-    
-                    .detail{
-                        display: none;
-                    }
-                }
+                margin-top: 30px;
     
                 .services-name{
                     width: 100%;
@@ -254,14 +251,14 @@ a{
                             text-align: center;
                             overflow: hidden;
                             @media screen and (min-width:$min-desktop){
-                                width: 30%;
+                                width: 40%;
                                 height: 40%;
                             }
     
                             h4{
                                 font-size: 1em;
                                 @media screen and (min-width:$min-desktop){
-                                    font-size: 1.4em;
+                                    font-size: 1.3em;
                                 }
                             }
                             p{
@@ -274,11 +271,19 @@ a{
                                 }
                             }
                             .serv-mob{
-                                @media screen and (min-width:$max-tab) {
+                                @media screen and (min-width:$min-desktop) {
                                     display: none;
                                 }
                             }
                         }
+                    }
+                }
+
+                .service-details{
+                    width: 100%;
+    
+                    .detail{
+                        display: none;
                     }
                 }
             }
@@ -319,19 +324,23 @@ a{
                 .abt-heads{
                     // background-color: yellow;
                     display: none;  // make it flex
-                    width: 30%;
+                    width: 40%;
                     margin-left: auto;
                     margin-right: auto;
                     display: flex;
                     justify-content: center;
                     align-items: center;
 
+                    @media screen and (min-width:1200px) {
+                        width: 30%;
+                    }
+
                     .abtTab{
                         // background-color: powderblue;
-                        width: 50%;
+                        display: none;
+                        width: 45%;
                         height: 50px;
                         padding: 15px;
-                        margin: 20px;
                         text-align: center;
                         cursor: pointer;
 
@@ -353,7 +362,7 @@ a{
                     }
                 }
                 #abt-detail-container{
-                    background-color: lightgray;
+                    background-color: rgba(211, 211, 211, 0.61);
                     display: none;
                     width: 70%;
                     height: 15vw;
@@ -379,6 +388,10 @@ a{
                         display: flex;
                         justify-content: space-around;
                         align-items: center;
+
+                        .abtTab{
+                            display: block;
+                        }
                     }
                     #mob-para{
                         display: none;

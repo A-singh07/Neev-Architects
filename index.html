@@ -50,34 +50,9 @@
 
             <section>
                 <div class="services" id="services">
-
-                    <!-- For the details in desktop view -->
-                    <!-- <div class="service-details">
-                        <div class="detail s1-detail" id="s1-detail">
-                            <p>We go beyond standard investigative methods and procedures with state of the art
-                                technologies
-                                to ensure accurate reporting, lower costs, and side-step unnecessary intrusive testing
-                                methods.</p>
-                        </div>
-                        <div class="detail s2-detail" id="s2-detail">
-                            <p>Lending our design and forensic expertise to our waterproofing and quality assurance
-                                consulting services makes us a valuable third party during the construction process.</p>
-                        </div>
-                        <div class="detail s3-detail" id="s3-detail">
-                            <p>By evaluating a range of building methods and materials through our forensic engagements,
-                                our
-                                team possesses a unique advantage over traditional architecture firms when it comes to
-                                design reconstruction.</p>
-                        </div>
-                        <div class="detail s4-detail" id="s4-detail">
-                            <p>We believe successful design solutions are the result of a comprehensive program that
-                                addresses conflicting elements of aesthetics, cost, durability and environmental
-                                responsibility.</p>
-                        </div>
-                    </div> -->
-
                     <div class="services-name">
                         <h5>SERVICES</h5>
+                        <!-- added class ser-container-desk through JS, CSS in _some.scss -->
                         <div id="ser-container-desk">
                             <div class="serv s1 services-desktop">
                                 <img src="./Assets/Images/forensic.jpg" class="serv-img">
@@ -121,6 +96,30 @@
                             </div>
                         </div>
                     </div>
+                    <!-- For the details in desktop view -->
+                    <!-- <div class="service-details">
+                        <div class="detail s1-detail" id="s1-detail">
+                            <p>We go beyond standard investigative methods and procedures with state of the art
+                                technologies
+                                to ensure accurate reporting, lower costs, and side-step unnecessary intrusive testing
+                                methods.</p>
+                        </div>
+                        <div class="detail s2-detail" id="s2-detail">
+                            <p>Lending our design and forensic expertise to our waterproofing and quality assurance
+                                consulting services makes us a valuable third party during the construction process.</p>
+                        </div>
+                        <div class="detail s3-detail" id="s3-detail">
+                            <p>By evaluating a range of building methods and materials through our forensic engagements,
+                                our
+                                team possesses a unique advantage over traditional architecture firms when it comes to
+                                design reconstruction.</p>
+                        </div>
+                        <div class="detail s4-detail" id="s4-detail">
+                            <p>We believe successful design solutions are the result of a comprehensive program that
+                                addresses conflicting elements of aesthetics, cost, durability and environmental
+                                responsibility.</p>
+                        </div>
+                    </div> -->
 
                 </div>
                 <!-- End of Services -->
@@ -137,13 +136,13 @@
                 <div class="about">
                     <h5>ABOUT</h5>
                     <div class="abt-heads">
-                        <h3 class="abtTab" id="whatID" onclick="aboutFunc('what')">what we do?</h3>
+                        <h3 class="abtTab abtActive" id="whatID" onclick="aboutFunc('what')">what we do?</h3>
                         <h3 class="abtTab" id="whoID" onclick="aboutFunc('who')">who we are?</h3>
                     </div>
 
                     <!-- For desktop -->
                     <div id="abt-detail-container">
-                        <div class="abt-detail" id="what">
+                        <div class="abt-detail" id="what" style="display: block;">
                             <p>A full-service design and consulting firm specializing in forensic architecture, quality
                                 assurance, and expert witness testimony.
                                 we ensure sound design and legal compliance throughout a building's lifespan, from

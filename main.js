@@ -61,10 +61,6 @@ function openContent(type) {
     // Seting active for current/selected tab
     event.currentTarget.className += " active"; // notice the space before 'active', it's to overwriting the existing values
 }
-// default Open tab contents
-document.getElementById('residency').style.display = "block";
-// document.getElementById('defaultOpen').className += " active";
-
 
 
 // About for Desktop
@@ -88,8 +84,4 @@ function aboutFunc(wh_abt) {
     }
     // Setting abtActive for current/selected tab
     event.currentTarget.className += " abtActive";
-
 }
-// default Open tab contents
-// document.getElementById('what').style.display = "block";
-// document.getElementById('whatID').className += " abtActive";
