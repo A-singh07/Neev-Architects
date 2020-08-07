@@ -37,6 +37,17 @@
 
 .show{display: block;}
 
+.active{
+    border-bottom: 2px solid brown;
+    background-color: rgba(233, 216, 193, 0.486);
+    border-top-left-radius: 1.5em;
+    border-top-right-radius: 1.5em;
+}
+.abtActive{
+    background-color: rgba(233, 216, 193, 0.486);
+    border-bottom: 2px solid brown;
+}
+
 
 .ser-container-desk{ 
     // background-color: darkgoldenrod;

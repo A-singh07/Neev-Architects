@@ -285,7 +285,25 @@ a{
             /* ------ End of Services -----*/
 
             /* -------- Projects ---------- */
+            .project{
+                margin-top: 100px;
 
+                h5{
+                    @include section-heading;
+                }
+                #open-project{
+                    width: 100%;
+                    height: 300px;
+                }
+                #test{
+                    background-color: rgb(202, 111, 111);
+                    width: 200px;
+                    height: 100px;
+                    margin: 10px auto 10px auto;
+                    cursor: pointer;
+                    color: white;
+                }
+            }
             
             /* ------End of Projects ------- */
 
@@ -299,19 +317,28 @@ a{
                 }
                 
                 .abt-heads{
-                    background-color: yellow;
+                    // background-color: yellow;
                     display: none;  // make it flex
-                    width: 50%;
+                    width: 30%;
                     margin-left: auto;
                     margin-right: auto;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
 
-                    h3{
-                        background-color: powderblue;
+                    .abtTab{
+                        // background-color: powderblue;
                         width: 50%;
+                        height: 50px;
                         padding: 15px;
-                        margin: 10px;
+                        margin: 20px;
                         text-align: center;
                         cursor: pointer;
+
+                        &:hover{
+                            background-color: rgba(233, 216, 193, 0.486);
+                            border-bottom: 2px solid brown;
+                        }
                     }
                 }
                 #mob-para{
@@ -326,26 +353,36 @@ a{
                     }
                 }
                 #abt-detail-container{
-                    background-color: pink;
+                    background-color: lightgray;
                     display: none;
-                    width: 70vw;
+                    width: 70%;
                     height: 15vw;
                     margin-left: auto;
                     margin-right: auto;
                     padding: 20px;
                     text-align: center;
+                    border-radius: 20px;
 
+                    @media screen and (min-width:1250px) {
+                        padding: 30px 50px;
+                    }
+
+                    .abt-detail{
+                        display: none;
+                        width: 100%;
+                        line-height: 2em;
+                    }
                 }
 
                 @media screen and (min-width:$min-desktop) {
-                    // .abt-heads{
-                    //     display: flex;
-                    //     justify-content: space-around;
-                    //     align-items: center;
-                    // }
+                    .abt-heads{
+                        display: flex;
+                        justify-content: space-around;
+                        align-items: center;
+                    }
                     #mob-para{
-                        // display: none;
-                        font-size: 1.1em;
+                        display: none;
+                        // font-size: 1.1em;
                     }
                     #abt-detail-container{
                         display: block;

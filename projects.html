@@ -11,28 +11,42 @@
 
 <body>
     <div id="project-container" class="project-container">
-        <div class="project-head">
-            <h3>Residency</h3>
-            <h3>Institutional</h3>
-            <h3>Workspace</h3>
+        <div class="project-tab">
+            <h3 class="tablink" onclick="openContent('residency')" id="defaultOpen">RESIDENCY</h3>
+            <h3 class=" tablink" onclick="openContent('institutional')">INSTITUTIONAL</h3>
+            <h3 class="tablink" onclick="openContent('workspace')">WORKSPACE</h3>
         </div>
-        <div class="prj-detail-container">
-            <div class="project-detail">
-                <div id="residency" class="detail-content" onclick="residency()">
-                    <h5 id="resd-1">Gran Carmen, Bengaluru</h5>
-                    <h5 id="resd-2">Woodside, Kasauli</h5>
+        <div class="prj-tab-content">
+            <div id="residency" class="detail-content">
+                <h5 id="resd-1">Gran Carmen, Bengaluru</h5>
+                <div class="crsl-container">
+
                 </div>
-                <div id="institutional" class="detail-content">
-                    <h5 id="insti-1">JRE Group of Instituitions, Greater Noida</h5>
-                    <h5 id="insti-2">Pearl academy, Jaipur</h5>
-                </div>
-                <div id="workspace" class="detail-content">
-                    <h5 id="workspc-1">Jindal Pipes Corporate Office, Gurgaon</h5>
-                    <h5 id="workspc-2">Surat Diamond Bourse, Surat</h5>
+
+                <h5 id="resd-2">Woodside, Kasauli</h5>
+                <div class="crsl-container">
+
                 </div>
             </div>
-            <div id="project-detail-img" class="project-detail-img">
+            <div id="institutional" class="detail-content">
+                <h5 id="insti-1">JRE Group of Instituitions, Greater Noida</h5>
+                <div class="crsl-container">
 
+                </div>
+                <h5 id="insti-2">Pearl academy, Jaipur</h5>
+                <div class="crsl-container">
+
+                </div>
+            </div>
+            <div id="workspace" class="detail-content">
+                <h5 id="workspc-1">Jindal Pipes Corporate Office, Gurgaon</h5>
+                <div class="crsl-container">
+
+                </div>
+                <h5 id="workspc-2">Surat Diamond Bourse, Surat</h5>
+                <div class="crsl-container">
+
+                </div>
             </div>
         </div>
     </div>
