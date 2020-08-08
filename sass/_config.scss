@@ -12,9 +12,9 @@ $font-roboto: 'Roboto', sans-serif;
 
 // Colors
 
-$pri-color: #1A579E;
-$sec-color: rgb(253, 240, 228);
-$ter-color: #4e392c;
+$extra-color: #1A579E;
+$pri-color: rgb(253, 240, 228);
+$sec-color: #744d36;
 
 
 
@@ -26,3 +26,10 @@ $min-tab: 600px; // portrait tablet
 $max-tab: 900px;
 
 $min-desktop: 900px;
+
+
+//color for Social Media Icons
+$facebook-color:#4267B2;
+$instagram-color: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+$twitter-color:#00acee;
+$linkedin-color: #1b7aa7;

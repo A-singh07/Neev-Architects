@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css"
+        integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q" crossorigin="anonymous">
     <title>Neev Architects</title>
 </head>
 
@@ -30,13 +32,13 @@
                 <div class="top-nav" id="top-nav">
                     <a href="javascript:void(0)" onclick="closeNav()" id="close-btn" class="close-btn">&times;</a>
                     <div class="menu-content" id="menu-content">
-                        <a href="#services">Services <br>
+                        <a href="#services" onclick="closeNav()">Services <br>
                             <p>What do we do?</p>
                         </a>
-                        <a href="#projects">Projects <br>
+                        <a href="#projects" onclick="closeNav()">Projects <br>
                             <p>What we've done?</p>
                         </a>
-                        <a href="#about">About <br>
+                        <a href="#about" onclick="closeNav()">About <br>
                             <p>who we are?</p>
                         </a>
                     </div>
@@ -124,16 +126,32 @@
                 </div>
                 <!-- End of Services -->
 
-                <div class="project">
+                <div class="project" id="projects">
                     <h5>PROJECTS</h5>
-                    <div id="open-project">
-                        <div id="test">
-                            <a href="projects.html" target="_blank" rel="noopener noreferrer">Click To OPEN</a></div>
+                    <div class="proj-mob-container">
+                        <img src="./Assets/Images/IMG_9147.jpg">
+                        <div>
+                            <a href="./projects.html" target="_blank">
+                                <i class="fas fa-arrow-circle-right"></i>
+                            </a>
+                        </div>
                     </div>
+                    <!-- <div class="project-main-container">
+                        <div class="prjOpen">
+                            <img src="./Assets/Images/Residency/Gran Carmen, Bengaluru/main_Gran-Carmen.jpg">
+                        </div>
+                        <div class="prjOpen">
+                            <img src="./Assets/Images/Institutional/Pearl academy, Jaipur/stringio.jpg">
+                        </div>
+                        <div class="prjOpen">
+                            <img
+                                src="./Assets/Images/Workspace/Jindal Pipes Corporate Office, Gurgaon/Jindal-Pipes-4-1440x763.jpg">
+                        </div>
+                    </div> -->
                 </div>
                 <!-- End of Projects -->
 
-                <div class="about">
+                <div class="about" id="about">
                     <h5>ABOUT</h5>
                     <div class="abt-heads">
                         <h3 class="abtTab abtActive" id="whatID" onclick="aboutFunc('what')">what we do?</h3>
@@ -169,8 +187,11 @@
                 <!-- End of About Section-->
             </section>
 
-            <footer id="footer">
-
+            <footer id="contact">
+                <a href="#" target="_blank" id="#facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" target="_blank" id="#instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" target="_target" id="#twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" target="_blank" id="#linkedin"><i class="fab fa-linkedin-in"></i></a>
             </footer>
         </main>
         <!-- ------X----- Main Content ------X------- -->

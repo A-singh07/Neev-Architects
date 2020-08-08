@@ -7,12 +7,14 @@
 function openNav() {
     document.getElementById('top-nav').style.height = "calc(50vh)";
     document.getElementById('close-btn').style.display = "block";
+    // document.getElementById('main').style.marginTop = "50vh";
 }
 
 // to close the top-nav
 function closeNav() {
     document.getElementById('top-nav').style.height = "0";
     document.getElementById('close-btn').style.display = "none";
+    // document.getElementById('main').style.marginTop = "0";
 }
 
 // For Services
