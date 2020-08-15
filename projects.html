@@ -6,50 +6,100 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/project.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css"
+        integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q" crossorigin="anonymous">
     <title>Projects</title>
 </head>
 
-<body>
+<body onload="slider()">
+
+    <div class="project-tab">
+        <h3 class="tablink active" onclick="projectTab('residency')">RESIDENCY</h3>
+        <h3 class="tablink" onclick="projectTab('institutional')">INSTITUTIONAL</h3>
+        <h3 class="tablink" onclick="projectTab('workspace')">WORKSPACE</h3>
+    </div>
+
     <div id="project-container" class="project-container">
-        <div class="project-tab">
-            <h3 class="tablink active" onclick="openContent('residency')">RESIDENCY</h3>
-            <h3 class="tablink" onclick="openContent('institutional')">INSTITUTIONAL</h3>
-            <h3 class="tablink" onclick="openContent('workspace')">WORKSPACE</h3>
+        <div class="prj-content">
+            <div id="residency" class="content" style="display: block;">
+                <h5 class="resd prjActive" onclick="openSlider('resd','resdSlider','resd1')">Gran Carmen, Bengaluru</h5>
+                <h5 class="resd" onclick="openSlider('resd','resdSlider','resd2')">Woodside, Kasauli</h5>
+            </div>
+            <div id="institutional" class="content">
+                <h5 class="insti prjActive" onclick="openSlider('insti','instiSlider','insti1')">JRE Group of
+                    Instituitions, Greater Noida
+                </h5>
+                <h5 class="insti" onclick="openSlider('insti','instiSlider','insti2')">Pearl academy, Jaipur</h5>
+            </div>
+            <div id="workspace" class="content">
+                <h5 class="workspc">Jindal Pipes Corporate Office, Gurgaon</h5>
+                <h5 class="workspc">Surat Diamond Bourse, Surat</h5>
+            </div>
         </div>
-        <div class="prj-tab-content">
-            <div id="residency" class="detail-content" style="display: block;">
-                <h5 id="resd-1">Gran Carmen, Bengaluru</h5>
-                <div class="crsl-container">
 
+        <!-- crousel -->
+        <div class="crsl-wrap">
+            <div id="arrow-left" class="arrow fas fa-caret-square-left"></div>
+
+            <div class="slider-container" style="display: block;">
+                <!-- <h4> RESD-1 </h4> -->
+                <div class="slide resdSlide" id="slide1">
+                    <img src="./Assets/Images/Residency/GranCarmen-Bengaluru/main_Gran-Carmen.jpg">
                 </div>
-
-                <h5 id="resd-2">Woodside, Kasauli</h5>
-                <div class="crsl-container">
-
+                <div class="slide resdSlide" id="slide2">
+                    <img src="./Assets/Images/Residency/GranCarmen-Bengaluru/Gran-Carmen-1-1440X763.jpg">
                 </div>
-            </div>
-            <div id="institutional" class="detail-content">
-                <h5 id="insti-1">JRE Group of Instituitions, Greater Noida</h5>
-                <div class="crsl-container">
-
-                </div>
-                <h5 id="insti-2">Pearl academy, Jaipur</h5>
-                <div class="crsl-container">
-
+                <div class="slide resdSlide" id="slide3">
+                    <img src="./Assets/Images/Residency/GranCarmen-Bengaluru/Gran-Carmen-2.jpg">
                 </div>
             </div>
-            <div id="workspace" class="detail-content">
-                <h5 id="workspc-1">Jindal Pipes Corporate Office, Gurgaon</h5>
-                <div class="crsl-container">
-
+            <!-- <div id="resd2" class="slider-container resdSlider">
+                <h4>RESD-2</h4>
+                <div class="slide" id="slide1">
+                    <img src="./Assets/Images/Residency/Woodside-Kasauli/Woodside-1-1440X763.jpg">
                 </div>
-                <h5 id="workspc-2">Surat Diamond Bourse, Surat</h5>
-                <div class="crsl-container">
-
+                <div class="slide" id="slide2">
+                    <img src="./Assets/Images/Residency/Woodside-Kasauli/balcony_bench.jpg">
+                </div>
+                <div class="slide" id="slide3">
+                    <img src="./Assets/Images/Residency/Woodside-Kasauli/balcony.jpg">
+                </div>
+            </div> -->
+            <!-- 
+            <div id="insti1" class="slider-container instiSlider">
+                <h4> INSTI-1 </h4>
+                <div class="slide" id="slide1">
+                    <img src="./Assets/Images/Residency/GranCarmen-Bengaluru/main_Gran-Carmen.jpg">
+                </div>
+                <div class="slide" id="slide2">
+                    <img src="./Assets/Images/Residency/GranCarmen-Bengaluru/Gran-Carmen-1-1440X763.jpg">
+                </div>
+                <div class="slide" id="slide3">
+                    <img src="./Assets/Images/Residency/GranCarmen-Bengaluru/Gran-Carmen-2.jpg">
                 </div>
             </div>
+            <div id="insti2" class="slider-container instiSlider">
+                <h4>INSTI-2</h4>
+                <div class="slide" id="slide1">
+                    <img src="./Assets/Images/Residency/Woodside-Kasauli/Woodside-1-1440X763.jpg">
+                </div>
+                <div class="slide" id="slide2">
+                    <img src="./Assets/Images/Residency/Woodside-Kasauli/balcony_bench.jpg">
+                </div>
+                <div class="slide" id="slide3">
+                    <img src="./Assets/Images/Residency/Woodside-Kasauli/balcony.jpg">
+                </div>
+            </div> -->
+
+            <div id="arrow-right" class="arrow fas fa-caret-square-right"></div>
         </div>
     </div>
+    <footer id="contact">
+        <a href="#" id="#facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" id="#instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" id="#twitter"><i class="fab fa-twitter"></i></a>
+        <a href="#" id="#linkedin"><i class="fab fa-linkedin-in"></i></a>
+    </footer>
 
     <script src="./main.js"></script>
 </body>

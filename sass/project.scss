@@ -1,59 +1,130 @@
-.project-container{
-    // background-color: greenyellow;
-    width: 100vw;
+@import 'config';
+@import 'some';
 
-    .project-tab{
-        // background-color: hotpink;
-        width: 40%;
-        margin-left: auto;
-        margin-right: auto;
+.project-tab{
+    // background-color: hotpink;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 10px;
+
+    h3{
+        // background-color: burlywood;
+        width: 30%;
+        height: 70px;
+        font-size: 1em;
         display: flex;
-        justify-content: space-around;
-        padding-top: 10px;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: auto;
+        cursor: pointer;
 
-        h3{
-            // background-color: burlywood;
-            width: 30%;
-            height: 70px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-bottom: auto;
-            cursor: pointer;
+        &:hover{
+            border-bottom: 2px solid brown;
+            background-color: rgba(233, 216, 193, 0.486);
+            border-top-left-radius: 1.5em;
+            border-top-right-radius: 1.5em;
+        }
+    }
+}
 
-            &:hover{
-                border-bottom: 2px solid brown;
-                background-color: rgba(233, 216, 193, 0.486);
-                border-top-left-radius: 1.5em;
-                border-top-right-radius: 1.5em;
+.project-container{
+    background-color: rgba(211, 211, 211, 0.61);
+    width: 90vw;
+    height: 37vw;
+    margin: 30px auto 20px auto;
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: 1fr 2.2fr;
+
+    .prj-content{
+        // background-color: pink;
+        padding: 20px;
+        width: 100%;
+        height: 37vw;
+
+        .content{
+            // background-color: violet;
+            display: none;
+            width: 100%;
+            padding: 10px 2px;
+
+            h5{
+                border-bottom: 1.5px solid darkgray;
+                padding: 10px 20px;
+                margin: 20px 30px 5px 5px;
+                font-weight: bold;
+                font-size: 1em;
+                cursor: pointer;
+                // background-color: rosybrown;
             }
         }
     }
 
-    .prj-tab-content{
-        background-color: rgba(211, 211, 211, 0.61);
-        width: 80vw;
-        height: 35vw;
-        margin: 10px auto 20px auto;
-        padding: 20px;
-        border-radius: 20px;
+    .crsl-wrap{
+        // background-color: aquamarine;
+        width: 100%;
+        height: 37vw;
+        position: relative;
 
-        .detail-content{
-            display: none;
-            width: 100%;
-
-            h5{
-                border-bottom: 1px solid darkgray;
-                padding: 10px 20px;
+        .arrow{
+            position: absolute;
+            top: 50%;
+            color: black;
+            font-size: 2em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            @media screen and (min-width: $LapL) {
+                font-size: 3em;
             }
 
-            .crsl-container{
-                background-color: pink;
-                width: 100%;
-                height: 60%; // 60%
+            &:hover{
+               transform: scale(1.1);
+               color: rgba(0, 0, 0, 0.829);
             }
-
         }
-        
+        #arrow-left{
+            left: 0;
+            justify-content: flex-start;
+        }
+        #arrow-right{
+            right: 0;
+            justify-content: flex-end;
+        }
+        .slider-container{
+            // background-color: bisque;
+            width: 100%;
+            height: 100%;
+            padding: 25px;
+            border-radius: 0px 20px 20px 0px;
+            display: none;
+            // overflow: hidden;
+
+            .slide{
+                // background-color: powderblue;
+                width: 100%;
+                height: 100%;
+                display: none;
+                // background-position: center;
+                // background-repeat: no-repeat;
+                // background-size: cover;
+    
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            // #slide1{
+            //     background-image: url(../Assets/Images/Residency/GranCarmen-Bengaluru/main_Gran-Carmen.jpg);
+            // }
+            // #slide2{
+            //     background-image: url(../Assets/Images/Residency/GranCarmen-Bengaluru/Gran-Carmen-2.jpg);
+            // }
+            // #slide3{
+            //     background-image: url(../Assets/Images/Residency/GranCarmen-Bengaluru/Gran-Carmen-3.jpg);
+            // }
+        } 
     }
 }

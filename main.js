@@ -42,18 +42,18 @@ x.addListener(services_media)
 
 
 
-// Projects for desktop
-function openContent(type) {
+// Projects Section for desktop
+function projectTab(type) {
 
-    var tabContent = document.getElementsByClassName("detail-content");
-    var tabLink = document.getElementsByClassName("tablink");
+    let tabContent = document.getElementsByClassName("content"),
+        tabLink = document.getElementsByClassName("tablink");
     let i;
 
-    // Hidding detail-content
+    // Hidding content
     for (i = 0; i < tabContent.length; i++) {
         tabContent[i].style.display = "none";
     }
-    // display the the clicked tab-content
+    // display the the clicked tab-content(heading)
     document.getElementById(type).style.display = 'block';
 
     //Hiding active class
@@ -63,6 +63,93 @@ function openContent(type) {
     // Seting active for current/selected tab
     event.currentTarget.className += " active"; // notice the space before 'active', it's to overwriting the existing values
 }
+
+/* ------- PROJECT PAGE -------- */
+function openSlider(prjType, slider, name) {
+
+    document.getElementsByClassName("slider-container")[0].id = name;
+    document.getElementsByClassName("slider-container")[0].className += slider;
+
+    // trial for only resd.
+    let prjTab = document.getElementsByClassName(prjType),
+        slideContainer = document.getElementsByClassName(slider);
+    let i;
+
+
+
+    // Hiding the slider container
+    for (i = 0; i < slideContainer.length; i++) {
+        slideContainer[i].style.display = "none";
+    }
+    //Display of the current tab content
+    document.getElementById(name).style.display = "block";
+
+    //Hiding prjActive class
+    for (i = 0; i < prjTab.length; i++) {
+        prjTab[i].className = prjTab[i].className.replace(" prjActive", "");
+    }
+    //setting prjActive class
+    event.currentTarget.className += " prjActive";
+
+
+}
+
+function slider() {
+
+    let slideImg = document.getElementsByClassName("slide"),
+        arrowLeft = document.querySelector("#arrow-left"),
+        arrowRight = document.querySelector("#arrow-right");
+    let current = 0;
+
+
+
+
+    //clear all images
+    function clear() {
+        for (let i = 0; i < slideImg.length; i++) {
+            slideImg[i].style.display = "none";
+        }
+    }
+    //initial Slide
+    function slideshow() {
+        clear();
+        slideImg[0].style.display = "block";
+    }
+
+    //show next
+    function slideRight() {
+        clear();
+        slideImg[current + 1].style.display = "block";
+        current++;
+    }
+    //Show Prev
+    function slideLeft() {
+        clear();
+        slideImg[current - 1].style.display = "block";
+        current--;
+    }
+
+    //Right arrow click
+    arrowRight.addEventListener("click", function () {
+        if (current === slideImg.length - 1) {
+            current = -1;
+        }
+        slideRight();
+    });
+    //left arrow click
+    arrowLeft.addEventListener("click", function () {
+        if (current === 0) {
+            current = slideImg.length;
+        }
+        slideLeft();
+    });
+
+    slideshow();
+}
+
+
+
+
 
 
 // About for Desktop
