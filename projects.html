@@ -22,18 +22,20 @@
     <div id="project-container" class="project-container">
         <div class="prj-content">
             <div id="residency" class="content" style="display: block;">
-                <h5 class="resd prjActive" onclick="openSlider('resd','resdSlider','resd1')">Gran Carmen, Bengaluru</h5>
-                <h5 class="resd" onclick="openSlider('resd','resdSlider','resd2')">Woodside, Kasauli</h5>
+                <h5 class="resd prjActive" onclick="activeSlider('resd','resd1')">Gran Carmen, Bengaluru</h5>
+                <h5 class="resd" onclick="activeSlider('resd','resd2')">Woodside, Kasauli</h5>
             </div>
             <div id="institutional" class="content">
-                <h5 class="insti prjActive" onclick="openSlider('insti','instiSlider','insti1')">JRE Group of
+                <h5 class="insti prjActive" onclick="activeSlider('insti', 'insti1')">JRE Group of
                     Instituitions, Greater Noida
                 </h5>
-                <h5 class="insti" onclick="openSlider('insti','instiSlider','insti2')">Pearl academy, Jaipur</h5>
+                <h5 class="insti" onclick="activeSlider('insti', 'insit2')">Pearl academy, Jaipur</h5>
             </div>
             <div id="workspace" class="content">
-                <h5 class="workspc">Jindal Pipes Corporate Office, Gurgaon</h5>
-                <h5 class="workspc">Surat Diamond Bourse, Surat</h5>
+                <h5 class="workspc prjActive" onclick="activeSlider('workspc', 'workspc1')">Jindal Pipes Corporate
+                    Office, Gurgaon
+                </h5>
+                <h5 class="workspc" onclick="activeSlider('workspc', 'workspc2')">Surat Diamond Bourse, Surat</h5>
             </div>
         </div>
 
@@ -41,55 +43,11 @@
         <div class="crsl-wrap">
             <div id="arrow-left" class="arrow fas fa-caret-square-left"></div>
 
-            <div class="slider-container" style="display: block;">
-                <!-- <h4> RESD-1 </h4> -->
-                <div class="slide resdSlide" id="slide1">
-                    <img src="./Assets/Images/Residency/GranCarmen-Bengaluru/main_Gran-Carmen.jpg">
-                </div>
-                <div class="slide resdSlide" id="slide2">
-                    <img src="./Assets/Images/Residency/GranCarmen-Bengaluru/Gran-Carmen-1-1440X763.jpg">
-                </div>
-                <div class="slide resdSlide" id="slide3">
-                    <img src="./Assets/Images/Residency/GranCarmen-Bengaluru/Gran-Carmen-2.jpg">
-                </div>
+            <div id="resd1" class="slider-container" style="display: block;">
+                <div class="slide"></div>
+                <div class="slide"></div>
+                <div class="slide"></div>
             </div>
-            <!-- <div id="resd2" class="slider-container resdSlider">
-                <h4>RESD-2</h4>
-                <div class="slide" id="slide1">
-                    <img src="./Assets/Images/Residency/Woodside-Kasauli/Woodside-1-1440X763.jpg">
-                </div>
-                <div class="slide" id="slide2">
-                    <img src="./Assets/Images/Residency/Woodside-Kasauli/balcony_bench.jpg">
-                </div>
-                <div class="slide" id="slide3">
-                    <img src="./Assets/Images/Residency/Woodside-Kasauli/balcony.jpg">
-                </div>
-            </div> -->
-            <!-- 
-            <div id="insti1" class="slider-container instiSlider">
-                <h4> INSTI-1 </h4>
-                <div class="slide" id="slide1">
-                    <img src="./Assets/Images/Residency/GranCarmen-Bengaluru/main_Gran-Carmen.jpg">
-                </div>
-                <div class="slide" id="slide2">
-                    <img src="./Assets/Images/Residency/GranCarmen-Bengaluru/Gran-Carmen-1-1440X763.jpg">
-                </div>
-                <div class="slide" id="slide3">
-                    <img src="./Assets/Images/Residency/GranCarmen-Bengaluru/Gran-Carmen-2.jpg">
-                </div>
-            </div>
-            <div id="insti2" class="slider-container instiSlider">
-                <h4>INSTI-2</h4>
-                <div class="slide" id="slide1">
-                    <img src="./Assets/Images/Residency/Woodside-Kasauli/Woodside-1-1440X763.jpg">
-                </div>
-                <div class="slide" id="slide2">
-                    <img src="./Assets/Images/Residency/Woodside-Kasauli/balcony_bench.jpg">
-                </div>
-                <div class="slide" id="slide3">
-                    <img src="./Assets/Images/Residency/Woodside-Kasauli/balcony.jpg">
-                </div>
-            </div> -->
 
             <div id="arrow-right" class="arrow fas fa-caret-square-right"></div>
         </div>

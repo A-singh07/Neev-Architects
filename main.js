@@ -63,27 +63,19 @@ function projectTab(type) {
     // Seting active for current/selected tab
     event.currentTarget.className += " active"; // notice the space before 'active', it's to overwriting the existing values
 }
-
-/* ------- PROJECT PAGE -------- */
-function openSlider(prjType, slider, name) {
-
+function assignID(name) {
     document.getElementsByClassName("slider-container")[0].id = name;
-    document.getElementsByClassName("slider-container")[0].className += slider;
+}
 
-    // trial for only resd.
-    let prjTab = document.getElementsByClassName(prjType),
-        slideContainer = document.getElementsByClassName(slider);
+function bgimg(name) {
+    let slide = document.getElementsByClassName("slide");
+    let x;
+}
+
+function activeSlider(prjType, name) {
+
+    let prjTab = document.getElementsByClassName(prjType);
     let i;
-
-
-
-    // Hiding the slider container
-    for (i = 0; i < slideContainer.length; i++) {
-        slideContainer[i].style.display = "none";
-    }
-    //Display of the current tab content
-    document.getElementById(name).style.display = "block";
-
     //Hiding prjActive class
     for (i = 0; i < prjTab.length; i++) {
         prjTab[i].className = prjTab[i].className.replace(" prjActive", "");
@@ -91,7 +83,7 @@ function openSlider(prjType, slider, name) {
     //setting prjActive class
     event.currentTarget.className += " prjActive";
 
-
+    assignID(name);
 }
 
 function slider() {
@@ -100,9 +92,6 @@ function slider() {
         arrowLeft = document.querySelector("#arrow-left"),
         arrowRight = document.querySelector("#arrow-right");
     let current = 0;
-
-
-
 
     //clear all images
     function clear() {
