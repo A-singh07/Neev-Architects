@@ -32,12 +32,12 @@
 
 .project-container{
     background-color: rgba(211, 211, 211, 0.61);
-    width: 90vw;
+    width: 95vw;
     height: 37vw;
     margin: 30px auto 20px auto;
     border-radius: 20px;
     display: grid;
-    grid-template-columns: 1fr 2.2fr;
+    grid-template-columns: 1fr 2.3fr;
 
     .prj-content{
         // background-color: pink;
@@ -111,6 +111,7 @@
                 background-repeat: no-repeat;
                 background-size: cover;
             }
+
         } 
     }
 }

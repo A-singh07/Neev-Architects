@@ -63,14 +63,6 @@ function projectTab(type) {
     // Seting active for current/selected tab
     event.currentTarget.className += " active"; // notice the space before 'active', it's to overwriting the existing values
 }
-function assignID(name) {
-    document.getElementsByClassName("slider-container")[0].id = name;
-}
-
-function bgimg(name) {
-    let slide = document.getElementsByClassName("slide");
-    let x;
-}
 
 function activeSlider(prjType, name) {
 
@@ -83,9 +75,23 @@ function activeSlider(prjType, name) {
     //setting prjActive class
     event.currentTarget.className += " prjActive";
 
-    assignID(name);
-}
+    //Assign the ID for the slide-container
+    function assignID() {
+        document.getElementsByClassName("slider-container")[0].id = name;
+    }
+    assignID();
 
+    //Assigning the ID for the slide elements
+    function bgimg() {
+        let slide = document.getElementsByClassName("slide");
+
+        slide[0].id = name + '-1';
+        slide[1].id = name + '-2';
+        slide[2].id = name + '-3';
+    }
+    bgimg();
+}
+// function for slider, starts on load of the page
 function slider() {
 
     let slideImg = document.getElementsByClassName("slide"),
