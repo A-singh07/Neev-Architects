@@ -106,7 +106,8 @@ a{
                     height: 50px;
                 }
                 a:hover{
-                    border-bottom: 2px solid brown;
+                    border-bottom: 2px solid;
+                    border-color: $active-border;
                 }
             }
 
@@ -157,7 +158,7 @@ a{
                 height: 0;  // adjust by javaScript
                 top: 0;
                 left: 0;
-                background-color: black;
+                background-color: $walnut-brown;
                 z-index: 10;
                 overflow: hidden;
                 transition: height 0.5s;
@@ -170,12 +171,12 @@ a{
                 // for every a tag inside it, even in the subtags.
                 a{
                     display: block;
-                    color: white;
+                    color: $pri-color;
                     padding: 15px;
                     // background-color: burlywood;
 
                     @media only screen and (min-width:$min-tab) and (max-width: $max-tab){
-                        border-bottom: 1px solid white;
+                        border-bottom: 1px solid $sec-color;
                         font-size: 0.9em;
                     }
 
@@ -226,7 +227,6 @@ a{
 
     main{
         // background-color: pink;
-        padding-top: 60px;
         transition: margin-top 0.5s;
 
         section{
@@ -235,6 +235,7 @@ a{
             .services{
                 width: 100%;
                 // background-color: coral;
+                padding-top: 30px;
     
                 .services-name{
                     width: 100%;
@@ -290,7 +291,8 @@ a{
 
             /* -------- Projects ---------- */
             .project{
-                margin: 50px 20px 100px 20px;
+                // background-color: chocolate;
+                padding: 30px;
 
                 h5{
                     @include section-heading;
@@ -338,7 +340,7 @@ a{
             /* ---------- About --------- */
             .about{
                 // background-color: yellow;
-                margin: 50px 20px;
+                padding: 30px;
 
                 h5{
                     @include section-heading;
@@ -367,8 +369,9 @@ a{
                         cursor: pointer;
 
                         &:hover{
-                            background-color: rgba(233, 216, 193, 0.486);
-                            border-bottom: 2px solid brown;
+                            background-color: $activeTab;
+                            border-bottom: 2px solid;
+                            border-color:$active-border;
                         }
                     }
                 }
@@ -384,7 +387,7 @@ a{
                     }
                 }
                 #abt-detail-container{
-                    background-color: rgba(211, 211, 211, 0.61);
+                    background-color: $light-grey;
                     display: none;
                     width: 70%;
                     height: 15vw;

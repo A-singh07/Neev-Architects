@@ -39,20 +39,20 @@
 
 // Active class for project Type
 .active{
-    border-bottom: 2px solid brown;
-    background-color: rgba(233, 216, 193, 0.486);
+    border-bottom: 2px solid $active-border;
+    background-color: $activeTab;
     border-top-left-radius: 1.5em;
     border-top-right-radius: 1.5em;
 }
 //for project place
 .prjActive{
-    background-color: rgba(167, 167, 167, 0.61);
+    background-color: $activeTab-grey;
 }
 
 // for about tab
 .abtActive{
-    background-color: rgba(233, 216, 193, 0.486);
-    border-bottom: 2px solid brown;
+    background-color: $activeTab;
+    border-bottom: 2px solid $active-border;
 }
 
 

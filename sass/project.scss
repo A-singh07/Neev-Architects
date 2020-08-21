@@ -22,7 +22,7 @@
         cursor: pointer;
 
         &:hover{
-            border-bottom: 2px solid brown;
+            border-bottom: 2px solid $active-border;
             background-color: rgba(233, 216, 193, 0.486);
             border-top-left-radius: 1.5em;
             border-top-right-radius: 1.5em;
@@ -31,7 +31,7 @@
 }
 
 .project-container{
-    background-color: rgba(211, 211, 211, 0.61);
+    background-color: $light-grey;
     width: 95vw;
     height: 37vw;
     margin: 30px auto 20px auto;
@@ -41,7 +41,7 @@
 
     .prj-content{
         // background-color: pink;
-        padding: 20px;
+        padding: 20px 10px;
         width: 100%;
         height: 37vw;
 
@@ -49,16 +49,20 @@
             // background-color: violet;
             display: none;
             width: 100%;
-            padding: 10px 2px;
+            padding: 10px 0px;
 
             h5{
                 border-bottom: 1.5px solid darkgray;
-                padding: 10px 20px;
-                margin: 20px 30px 5px 5px;
+                padding: 15px 10px;
+                margin: 20px 30px 5px 8px;
                 font-weight: bold;
                 font-size: 1em;
                 cursor: pointer;
                 // background-color: rosybrown;
+
+                &:hover{
+                    border-bottom: 1.7px solid;
+                }
             }
         }
     }
@@ -67,6 +71,7 @@
         // background-color: aquamarine;
         width: 100%;
         height: 37vw;
+        padding-right: 10px;
         position: relative;
 
         .arrow{
@@ -77,11 +82,11 @@
             cursor: pointer;
             transition: all 0.3s ease;
             @media screen and (min-width: $LapL) {
-                font-size: 3em;
+                font-size: 2.6em;
             }
 
             &:hover{
-               transform: scale(1.1);
+               transform: scale(1.2);
                color: rgba(0, 0, 0, 0.829);
             }
         }
@@ -90,15 +95,15 @@
             justify-content: flex-start;
         }
         #arrow-right{
-            right: 0;
+            right: 10px;
             justify-content: flex-end;
         }
         .slider-container{
             // background-color: bisque;
             width: 100%;
             height: 100%;
-            padding: 25px;
-            border-radius: 0px 20px 20px 0px;
+            padding: 30px;
+            // border-radius: 0px 20px 20px 0px;
             display: none;
             // overflow: hidden;
 

@@ -5,16 +5,16 @@
 
 // to open the top-nav
 function openNav() {
-    document.getElementById('top-nav').style.height = "calc(50vh)";
+    document.getElementById('top-nav').style.height = "50vh";
     document.getElementById('close-btn').style.display = "block";
-    // document.getElementById('main').style.marginTop = "50vh";
+    // document.getElementById('mother-container').style.marginTop = "50vh";
 }
 
 // to close the top-nav
 function closeNav() {
     document.getElementById('top-nav').style.height = "0";
     document.getElementById('close-btn').style.display = "none";
-    // document.getElementById('main').style.marginTop = "0";
+    // document.getElementById('mother-container').style.marginTop = "0";
 }
 
 // For Services
@@ -43,7 +43,21 @@ x.addListener(services_media)
 
 
 // Projects Section for desktop
-function projectTab(type) {
+
+//Assign the ID for the slide-container
+function assignID(name) {
+    document.getElementsByClassName("slider-container")[0].id = name;
+}
+//Assigning bg-img to the slide elements
+function bgimg(name) {
+    let slide = document.getElementsByClassName("slide");
+
+    slide[0].id = name + '-1';
+    slide[1].id = name + '-2';
+    slide[2].id = name + '-3';
+}
+
+function projectTab(type, prjType, name) {
 
     let tabContent = document.getElementsByClassName("content"),
         tabLink = document.getElementsByClassName("tablink");
@@ -62,6 +76,19 @@ function projectTab(type) {
     }
     // Seting active for current/selected tab
     event.currentTarget.className += " active"; // notice the space before 'active', it's to overwriting the existing values
+
+    assignID(name);
+    bgimg(name);
+
+    // For prjActive class to the subTabs
+    let prjTab = document.getElementsByClassName(prjType);
+    //Hiding prjActive class
+    for (i = 0; i < prjTab.length; i++) {
+        prjTab[i].className = prjTab[i].className.replace(" prjActive", "");
+    }
+    prjTab[0].className += " prjActive";
+
+    slider();
 }
 
 function activeSlider(prjType, name) {
@@ -75,22 +102,11 @@ function activeSlider(prjType, name) {
     //setting prjActive class
     event.currentTarget.className += " prjActive";
 
-    //Assign the ID for the slide-container
-    function assignID() {
-        document.getElementsByClassName("slider-container")[0].id = name;
-    }
-    assignID();
-
-    //Assigning the ID for the slide elements
-    function bgimg() {
-        let slide = document.getElementsByClassName("slide");
-
-        slide[0].id = name + '-1';
-        slide[1].id = name + '-2';
-        slide[2].id = name + '-3';
-    }
-    bgimg();
+    assignID(name);
+    bgimg(name);
+    slider();
 }
+
 // function for slider, starts on load of the page
 function slider() {
 
@@ -99,8 +115,10 @@ function slider() {
         arrowRight = document.querySelector("#arrow-right");
     let current = 0;
 
+
     //clear all images
     function clear() {
+        let slideImg = document.getElementsByClassName("slide");
         for (let i = 0; i < slideImg.length; i++) {
             slideImg[i].style.display = "none";
         }
@@ -110,7 +128,6 @@ function slider() {
         clear();
         slideImg[0].style.display = "block";
     }
-
     //show next
     function slideRight() {
         clear();
@@ -123,7 +140,6 @@ function slider() {
         slideImg[current - 1].style.display = "block";
         current--;
     }
-
     //Right arrow click
     arrowRight.addEventListener("click", function () {
         if (current === slideImg.length - 1) {
