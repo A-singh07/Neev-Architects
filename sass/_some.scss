@@ -37,12 +37,10 @@
 
 .show{display: block;}
 
-// Active class for project Type
+// Active class for project Type Tab
 .active{
     border-bottom: 2px solid $active-border;
     background-color: $activeTab;
-    border-top-left-radius: 1.5em;
-    border-top-right-radius: 1.5em;
 }
 //for project place
 .prjActive{
@@ -114,19 +112,21 @@
 }
 
 footer{
+    position: absolute;
+    bottom: 0;
     width: 100vw;
-    height: 10%;
     background-color: black;
     display: flex;
     justify-content: center;
     align-items: center;
 
     @media screen and (min-width:$min-tab) and (max-width:$max-tab){
-        height: 10%;
+        height: 12%;
     }
 
     @media screen and (min-width:$min-desktop) {
-        height: 8vw;
+        height: 7vw;
+        position: static;
     }
 
     a{
@@ -142,7 +142,7 @@ footer{
             font-size: 1.2em;
         }
 
-        @media screen and (min-width: $min-tab){
+        @media screen and (min-width:$min-desktop){
             width: 40px;
             height: 40px;
             i{

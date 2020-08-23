@@ -3,7 +3,7 @@
 
 .project-tab{
     // background-color: hotpink;
-    width: 50%;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
     display: flex;
@@ -12,9 +12,9 @@
 
     h3{
         // background-color: burlywood;
-        width: 30%;
-        height: 70px;
-        font-size: 1em;
+        width: 32%;
+        height: 40px;
+        font-size: 0.7em;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -24,16 +24,33 @@
         &:hover{
             border-bottom: 2px solid $active-border;
             background-color: rgba(233, 216, 193, 0.486);
-            border-top-left-radius: 1.5em;
-            border-top-right-radius: 1.5em;
+        }
+    }
+    @media screen and (min-width:$min-tab) and (max-width:$max-tab) {
+        width: 60%;
+
+        h3{
+            width: 30%;
+            height: 50px;
+            font-size: 0.8em;
+        }
+    }
+
+    @media screen and (min-width: $min-desktop) {
+        width: 50%;
+
+        h3{
+            height: 60px;
+            font-size: 1em;
         }
     }
 }
 
 .project-container{
+    // background-color: cornflowerblue;
     background-color: $light-grey;
     width: 95vw;
-    height: 37vw;
+    height: 38vw;
     margin: 30px auto 20px auto;
     border-radius: 20px;
     display: grid;
@@ -41,9 +58,9 @@
 
     .prj-content{
         // background-color: pink;
-        padding: 20px 10px;
+        padding: 20px 5px 20px 10px;
         width: 100%;
-        height: 37vw;
+        height: 38vw;
 
         .content{
             // background-color: violet;
@@ -54,9 +71,8 @@
             h5{
                 border-bottom: 1.5px solid darkgray;
                 padding: 15px 10px;
-                margin: 20px 30px 5px 8px;
+                margin: 20px 10px 20px 5px;
                 font-weight: bold;
-                font-size: 1em;
                 cursor: pointer;
                 // background-color: rosybrown;
 
@@ -102,7 +118,7 @@
             // background-color: bisque;
             width: 100%;
             height: 100%;
-            padding: 30px;
+            padding: 20px;
             // border-radius: 0px 20px 20px 0px;
             display: none;
             // overflow: hidden;
@@ -115,6 +131,10 @@
                 background-position: center;
                 background-repeat: no-repeat;
                 background-size: cover;
+            }
+
+            @media screen and (min-width:$min-desktop) {
+                padding: 30px;
             }
 
         } 
