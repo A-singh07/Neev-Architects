@@ -123,13 +123,10 @@ footer{
 
     @media screen and (min-width:$min-tab) and (max-width:$max-tab){
         height: 12%;
-        position: absolute;
-        bottom: 0;
     }
 
     @media screen and (min-width:$min-desktop) {
         height: 7vw;
-        position: static;
     }
 
     a{

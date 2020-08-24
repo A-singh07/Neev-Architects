@@ -75,6 +75,10 @@
             }
         }
     }
+    // To adjust the footer in prj page at this breakpoint
+    @media screen and (min-width: $min-tab) and (max-width:$max-tab){
+        margin: 30px auto 100px auto;
+    }
 
     .prj-content{
         // background-color: pink;
