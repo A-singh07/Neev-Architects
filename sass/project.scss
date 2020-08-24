@@ -50,12 +50,11 @@
     background-color: $light-grey;
     width: 100vw;
     height: 75vh;
-    margin: 10px auto 10px auto;
+    margin: 20px auto 30px auto;
 
     @media screen and (min-width: $min-tab) {
         width: 95vw;
         height: 38vw;
-        margin: 30px auto 20px auto;
         border-radius: 20px;
         display: grid;
         grid-template-columns: 1fr 2.3fr;
@@ -98,7 +97,7 @@
                 // background-color: rosybrown;
 
                 &:hover{
-                    border-bottom: 1.7px solid;
+                    border-bottom: 1.5px solid;
                 }
             }
         }
