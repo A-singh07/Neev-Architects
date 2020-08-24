@@ -5,7 +5,7 @@
 
 // to open the top-nav
 function openNav() {
-    document.getElementById('top-nav').style.height = "50vh";
+    document.getElementById('top-nav').style.height = "43vh";
     document.getElementById('close-btn').style.display = "block";
     // document.getElementById('mother-container').style.marginTop = "50vh";
 }
