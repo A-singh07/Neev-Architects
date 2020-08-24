@@ -112,10 +112,10 @@
 }
 
 footer{
-    position: absolute;
-    bottom: 0;
+    // position: absolute;
+    // bottom: 0;
     width: 100vw;
-    height: 50px;
+    height: 60px;
     background-color: black;
     display: flex;
     justify-content: center;
@@ -123,6 +123,8 @@ footer{
 
     @media screen and (min-width:$min-tab) and (max-width:$max-tab){
         height: 12%;
+        position: absolute;
+        bottom: 0;
     }
 
     @media screen and (min-width:$min-desktop) {
