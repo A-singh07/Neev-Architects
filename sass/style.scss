@@ -31,9 +31,41 @@ a{
     border-radius: 10px;
 }
 
+#loader{
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -50px 0 0 -50px;
+    z-index: 10;
+    width: 80px;
+    height: 80px;
+    border: 10px solid $activeTab-grey;
+    border-top: 10px solid $walnut-brown;
+    border-radius: 50%;
+    animation: spin 2s linear infinite; 
 
+    @media screen and (min-width: $min-tab) {
+        width: 150px;
+        height: 150px;
+        border: 15px solid $activeTab-grey;
+        border-top: 15px solid $walnut-brown;
+        margin: -75px 0 0 -75px;
+    }
+}
+@keyframes spin{
+    0% {transform: rotate(0deg);}
+    100%{transform: rotate(360deg);}
+}
+@keyframes showUp{
+    0%{bottom: -200px; opacity: 0;}
+    100%{bottom: 0px; opacity: 1;}
+}
 .mother-container{
+    display: none;
+    position: relative;
     transition: margin-top 0.5s;
+    animation: showUp 1s linear;
     
     @media screen and (min-width:$min-desktop){
         scroll-behavior: smooth;
