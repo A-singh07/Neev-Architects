@@ -32,6 +32,10 @@
         left: 25px;
         width: 40px;
         height: 2px;
+        @media screen and (min-width:$min-desktop){
+            height: 3px;
+            border-radius: 2em;
+        }
     }
 }
 
@@ -116,7 +120,7 @@ footer{
     // bottom: 0;
     width: 100vw;
     height: 60px;
-    background-color: black;
+    background-image: $Grad-PremBlack;
     display: flex;
     justify-content: center;
     align-items: center;

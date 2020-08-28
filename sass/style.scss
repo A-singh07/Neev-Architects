@@ -62,7 +62,7 @@ a{
     100%{bottom: 0px; opacity: 1;}
 }
 .mother-container{
-    display: none;
+    display: block;
     position: relative;
     transition: margin-top 0.5s;
     animation: showUp 1s linear;
@@ -77,6 +77,7 @@ a{
         padding-top: 10px;
         width: 100vw;
         height: 80vw;
+        background-image: $GradBgImg3;
         background: url(../Assets/Images/ImgTag_Architecture.jpg) no-repeat;
         background-size: 100% 100%;
 
@@ -271,18 +272,45 @@ a{
             .services{
                 width: 100%;
                 // background-color: coral;
-                padding-top: 30px;
-    
+                position: relative;
+                overflow: hidden;
+
+                #bgservice{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 125%;
+                    height: 100%;
+                    z-index: 0;
+                    opacity: 0.4;
+                    @media screen and (min-width: $min-tab) {
+                        width: 120%;
+                    }
+                    @media screen and (min-width: $min-desktop){
+                        width: 100%;
+                    }
+                }
+
                 .services-name{
                     width: 100%;
-                    margin-top: 20px;
-    
+                    height: 100%;
+                    padding: 70px 0 70px 0px;
+                    position: relative;
+                    z-index: 2;
+                    // background-color: yellow;
+
                     h5{
                         @include section-heading;
+                        font-size: 1em;
+                        font-weight: bold;
                     }
     
                     #ser-container-desk{
-    
+                        display: flex;
+                        flex-wrap: wrap;
+                        width: 70%;
+                        // background-color: blue;
+                        margin: 0px auto 0px auto;
                         .serv{
                             width: 100%;
                             text-align: center;
@@ -302,6 +330,7 @@ a{
                                 font-size: 0.8em;
                                 text-align: center;
                                 padding: 0px 30px;
+                                font-weight: bold;
                                 
                                 @media screen and (min-width:$min-tab) and (max-width:$max-tab){
                                     padding: 0px 80px;
@@ -376,7 +405,7 @@ a{
             /* ---------- About --------- */
             .about{
                 // background-color: yellow;
-                background-image: linear-gradient(120deg, #f1d885a4 0%, #c26147bb 100%);
+                background-image: $GradBgImg3;
                 padding: 20px;
                 @media screen and (min-width:$min-tab){
                     padding: 30px;
