@@ -282,7 +282,7 @@ a{
                     width: 125%;
                     height: 100%;
                     z-index: 0;
-                    opacity: 0.4;
+                    opacity: 0.5;
                     @media screen and (min-width: $min-tab) {
                         width: 120%;
                     }
@@ -405,104 +405,127 @@ a{
             /* ---------- About --------- */
             .about{
                 // background-color: yellow;
-                background-image: $GradBgImg3;
+                // background-image: $GradBgImg3;
+                overflow: hidden;
+                position: relative;
                 padding: 20px;
                 @media screen and (min-width:$min-tab){
-                    padding: 30px;
+                    padding: 40px 0 100px;
                 }
-                @media screen and (min-width:$min-desktop){
-                    background-image: none;
-                }
-
-                h5{
-                    @include section-heading;
-                }
-                .abt-heads{
-                    // background-color: yellow;
-                    display: none;  // make it flex
-                    width: 40%;
-                    margin-left: auto;
-                    margin-right: auto;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-
-                    @media screen and (min-width:1200px) {
-                        width: 30%;
-                    }
-
-                    .abtTab{
-                        // background-color: powderblue;
-                        display: none;
-                        width: 45%;
-                        height: 50px;
-                        padding: 15px;
-                        text-align: center;
-                        cursor: pointer;
-
-                        &:hover{
-                            background-color: $activeTab;
-                            border-bottom: 2px solid;
-                            border-color:$active-border;
-                        }
-                    }
-                }
-                #mob-para{
-                    // background-color: lightblue;
-                    // margin: 5px 20px;
-                    padding: 10px 20px;
-                    text-align: center;
-                    font-size: 0.8em;
-
-                    @media screen and (min-width:$min-tab) and (max-width:$max-tab){
-                        padding: 0px 80px;
-                    }
-                }
-                #abt-detail-container{
-                    background-color: $light-grey;
-                    display: none;
-                    width: 70%;
-                    height: 15vw;
-                    margin-left: auto;
-                    margin-right: auto;
-                    padding: 20px;
-                    text-align: center;
-                    border-radius: 20px;
-
-                    @media screen and (min-width:1250px) {
-                        padding: 30px 50px;
-                        // height: 15vw;
-                    }
-
-                    @media screen and (min-width:900px) and (max-width:1100px) {
-                        width: 75%;
-                        height: 20vw;
-                        padding: 10px 50px; 
-                    }
-
-                    .abt-detail{
-                        display: none;
+                #aboutBg{
+                    position: absolute;
+                    top: 10;
+                    left: -20px;
+                    width: 110%;
+                    height: 105%;
+                    opacity: 0.2;
+                    z-index: 0;
+                    @media screen and (min-width:$min-tab){
+                        top: 0;
+                        left: 0;
                         width: 100%;
-                        line-height: 2em;
+                        height: 120%;
                     }
+                    // @media screen and (min-width: $min-desktop){
+                    //     display: none;
+                    // }
+
                 }
+                .about-container{
+                    position: relative;
+                    z-index: 2;
 
-                @media screen and (min-width:$min-desktop) {
+                    h5{
+                        @include section-heading;
+                    }
                     .abt-heads{
+                        // background-color: yellow;
+                        display: none;  // make it flex
+                        width: 40%;
+                        margin-left: auto;
+                        margin-right: auto;
                         display: flex;
-                        justify-content: space-around;
+                        justify-content: center;
                         align-items: center;
-
+    
+                        @media screen and (min-width:1200px) {
+                            width: 30%;
+                        }
+    
                         .abtTab{
-                            display: block;
+                            // background-color: powderblue;
+                            display: none;
+                            width: 45%;
+                            height: 50px;
+                            padding: 15px;
+                            text-align: center;
+                            cursor: pointer;
+    
+                            &:hover{
+                                background-color: $activeTab;
+                                border-bottom: 2px solid;
+                                border-color:$active-border;
+                            }
                         }
                     }
                     #mob-para{
-                        display: none;
-                        // font-size: 1.1em;
+                        // background-color: lightblue;
+                        // margin: 5px 20px;
+                        padding: 10px 20px;
+                        text-align: center;
+                        font-size: 0.8em;
+                        font-weight: 700;
+    
+                        @media screen and (min-width:$min-tab) and (max-width:$max-tab){
+                            padding: 0px 80px;
+                        }
                     }
                     #abt-detail-container{
-                        display: block;
+                        background-color: $light-grey;
+                        display: none;
+                        width: 70%;
+                        height: 15vw;
+                        margin-left: auto;
+                        margin-right: auto;
+                        padding: 20px;
+                        text-align: center;
+                        border-radius: 20px;
+    
+                        @media screen and (min-width:1250px) {
+                            padding: 30px 50px;
+                            // height: 15vw;
+                        }
+    
+                        @media screen and (min-width:900px) and (max-width:1100px) {
+                            width: 75%;
+                            height: 20vw;
+                            padding: 10px 50px; 
+                        }
+    
+                        .abt-detail{
+                            display: none;
+                            width: 100%;
+                            line-height: 2em;
+                        }
+                    }
+    
+                    @media screen and (min-width:$min-desktop) {
+                        .abt-heads{
+                            display: flex;
+                            justify-content: space-around;
+                            align-items: center;
+    
+                            .abtTab{
+                                display: block;
+                            }
+                        }
+                        #mob-para{
+                            display: none;
+                            // font-size: 1.1em;
+                        }
+                        #abt-detail-container{
+                            display: block;
+                        }
                     }
                 }
             }
