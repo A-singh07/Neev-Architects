@@ -43,7 +43,7 @@
 
 // Active class for project Type Tab
 .active{
-    border-bottom: 2px solid $active-border;
+    border-bottom: 3px solid $active-border;
     background-color: $activeTab;
 }
 //for project place
@@ -54,7 +54,7 @@
 // for about tab
 .abtActive{
     background-color: $activeTab;
-    border-bottom: 2px solid $active-border;
+    border-bottom: 3px solid $active-border;
 }
 
 
