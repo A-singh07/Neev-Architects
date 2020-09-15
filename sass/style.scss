@@ -357,6 +357,9 @@ a{
             .project{
                 // background-color: chocolate;
                 padding: 30px;
+                @media screen and (min-width:$min-desktop){
+                    height: 90vh;
+                }
 
                 h5{
                     @include section-heading;
@@ -366,7 +369,9 @@ a{
                     height: 50vw;
                     margin: 10px auto 10px auto;
                     position: relative;
-                    
+                    @media screen and (min-width:$min-desktop) {
+                        display: none;
+                    }
                     img{
                         width: 100%;
                         height: 100%;
@@ -390,13 +395,64 @@ a{
                             font-size: 3em;
                         }
                     }
-                    
+                }
+                .project-desk-container{
+                    display: none;
+                    width: 80%;
+                    height: 90%;
+                    margin: 10px auto 0 auto;
+                    // background-color: lightcoral;
 
-                    @media screen and (min-width:$min-desktop) {
-                        display: none;
+                    @media screen and (min-width: $min-desktop) {
+                        display: flex;
+                    }
+
+                    .prjOpen{
+                        width: 70%;
+                        height: 100%;
+                        margin: 0 auto 0 auto;
+                        // background-color: lightblue;
+                        position: relative;
+                        &:hover{
+                            div{
+                                clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+                            }
+                            a{
+                                opacity: 1;
+                            }
+                        }
+
+                        div{
+                            width: 100%;
+                            height: 100%;
+                            transition: all 0.5s ease;
+                            background: url(../Assets/Images/Untitled-2.png) no-repeat;
+                            background-position: center;
+                            background-size: 100% 100%;
+                            clip-path: polygon(25% 0, 75% 0, 75% 100%, 25% 100%);
+                        }
+                        a{
+                            display: flex;
+                            position: absolute;
+                            top: 5%;
+                            right: 5%;
+                            width: 20%;
+                            height: 90%;
+                            justify-content: center;
+                            align-items: center;
+                            padding: 30px;
+                            background-color: #a07054c4;
+                            transition: all 0.4s ease;
+                            opacity: 0;
+
+                            i{
+                                color: white;
+                                font-size: 2em;
+                            }
+                        }
+                        
                     }
                 }
-
             }
             
             /* ------End of Projects ------- */

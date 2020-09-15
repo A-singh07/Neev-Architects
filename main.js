@@ -42,13 +42,15 @@ function services_media() {
         }
     }
 }
-var x = window.matchMedia("(min-width:900px)")
+var x = window.matchMedia("(min-width:1024px)")
 services_media()
 x.addListener(services_media)
 
 
 
 // Projects Section for desktop
+
+
 
 //Assign the ID for the slide-container
 function assignID(name) {
