@@ -21,7 +21,7 @@
 
         &:hover{
             border-bottom: 3px solid $active-border;
-            background-color: rgba(233, 216, 193, 0.486);
+            background-color: $activeTab;
         }
     }
     @media screen and (min-width:$min-tab) and (max-width:$max-tab) {

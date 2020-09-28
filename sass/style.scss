@@ -12,6 +12,7 @@ body{
     line-height: 1.3em;
     background-color: $pri-color;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 a{
@@ -28,7 +29,6 @@ a{
 }
 ::-webkit-scrollbar-thumb{
     background-color: $sec-color;
-    border-radius: 10px;
 }
 
 #loader{
@@ -57,74 +57,83 @@ a{
     0% {transform: rotate(0deg);}
     100%{transform: rotate(360deg);}
 }
-@keyframes showUp{
+@keyframes showUp{    // display of mother-container after Loader
     0%{bottom: -200px; opacity: 0;}
     100%{bottom: 0px; opacity: 1;}
 }
 .mother-container{
-    display: block;
+    display: none;
     position: relative;
     transition: margin-top 0.5s;
     animation: showUp 1s linear;
     
-    @media screen and (min-width:$min-desktop){
-        scroll-behavior: smooth;
-    }
+    // @media screen and (min-width:$min-desktop){
+    //     scroll-behavior: smooth;
+    // }
 
     nav{
         // background-color: cyan;
+        position: relative;
         z-index: 5;
-        padding-top: 10px;
         width: 100vw;
         height: 80vw;
         background-image: $GradBgImg3;
         background: url(../Assets/Images/ImgTag_Architecture.jpg) no-repeat;
         background-size: 100% 100%;
 
-        @media screen and (min-width:$min-desktop){
-            height: 100vh;
-            // background: none;
-            background-image: $GradBgImg3;
-            background: url(../Assets/Images/TIFF-STROM-QC-1.jpg) no-repeat;
-            background-position: center;
-            background-size: 100% 100%;
-
-        }
-        @media screen and (min-width:$min-tab) and (max-width:$max-tab){
-            height: 100vh;
-        }
         .site-name{
             position: absolute;
             top: 0;
-            left: 0;
-            width: 100px;
-            font-size: 1.7em;
+            width: 250px;
+            z-index: 5;
+            font-size: 1.2em;
             // background-color: chartreuse;
 
-            @media screen and (min-width:$min-desktop){
-                font-size: 2em;
-                top: 10px;
-            }
-
             a{
-                // background-color: chocolate;
+                background-color: lightblue;
+                position: relative;
+                padding: 5px;
                 display: block;
-                padding: 20px;
+                width: 60px;
+                height: 60px;
                 transition: all 0.3s;
 
-                &:hover{
-                    color: rgba(80, 80, 80, 0.534);
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            h4{
+                // background-color: chocolate;
+                display: block;
+                position: absolute;
+                top: 0px;
+                left: 60px;
+                margin-top: 0;
+                text-align: left;
+                line-height: 1.2em;
+                padding: 10px;
+            }
+            @media(min-width: $min-tab){
+                font-size: 1.7em;
+                a{
+                    width: 80px;
+                    height: 80px;
+                }
+                h4{
+                    left: 80px;
                 }
             }
         }
-
         .menu-desktop{
             display: none;
+            position: absolute;
+            z-index: 5;
             width: 40%;
             height: 60px;
+            right: 15px;
             justify-content:space-evenly;
             align-items: center;
-            float: right;
             font-size: 1.3em;
             font-weight: bold;
             margin-right: 20px;
@@ -144,6 +153,73 @@ a{
                 display: flex;
             }
         }
+        
+        #wrapper{
+            display: none;
+            position: relative;
+            height: 100vh;
+            width: 100vw;
+            overflow: hidden;
+
+            .layer{
+                position: absolute;
+                width: 100vw;
+                height: 100vh;
+                overflow: hidden;
+
+                .content-wrap{
+                    position: absolute;
+                    width: 100vw;
+                    height: 100vh;
+
+                    img{
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+            .bottom{z-index: 2;}
+            .top{
+                z-index: 3;
+                transform: skew(-30deg);
+                margin-left: -1000px;
+                width: calc(50vw + 1000px);
+                .content-wrap{
+                    transform: skew(30deg);
+                    margin-left: 1000px;
+                }
+            }
+
+            .handle{
+                position: absolute;
+                width: 6px;
+                height: 200%;
+                display: block;
+                background-color: $sec-color;
+                z-index: 4;
+                top: 50%;
+                left: 50%;
+                transform: rotate(30deg) translateY(-50%);
+                transform-origin: top;
+            }
+        }
+
+        @media screen and (min-width:$min-desktop){
+            height: 100vh;
+            background: none;
+            // background: url(../Assets/Images/sketch.jpg) no-repeat;
+            // background-position: center;
+            // background-size: 100% 100%;
+            #wrapper{display: block;}
+
+        }
+        @media screen and (min-width:$min-tab) and (max-width:$max-tab){
+            height: 100vh;
+        }
+
         .ham-menu-wrap{
             display: block;
             // background-color: burlywood;
@@ -441,7 +517,7 @@ a{
                             justify-content: center;
                             align-items: center;
                             padding: 30px;
-                            background-color: #a07054c4;
+                            background-color: #b4985591;  //$walnut-brown with alpha
                             transition: all 0.4s ease;
                             opacity: 0;
 
