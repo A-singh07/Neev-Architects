@@ -9,7 +9,7 @@ function showpage() {
 }
 
 
-// SplitScreen for Desktop
+// SplitScreen landing page for Desktop
 document.addEventListener('DOMContentLoaded', function () {
     let wrapper = document.getElementById('wrapper');
     let topLayer = wrapper.querySelector('.top');
@@ -211,3 +211,5 @@ function aboutFunc(wh_abt) {
     // Setting abtActive for current/selected tab
     event.currentTarget.className += " abtActive";
 }
+
+
